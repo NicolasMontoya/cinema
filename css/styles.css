@@ -1,0 +1,89 @@
+::selection { background-color: #E13300; color: white; }
+::-moz-selection { background-color: #E13300; color: white; }
+
+body {
+    background-color: #fff;
+    margin: 40px;
+    font: 13px/20px normal Helvetica, Arial, sans-serif;
+    color: #4F5155;
+}
+
+a {
+    color: #003399;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+h1 {
+    color: #444;
+    background-color: transparent;
+    border-bottom: 1px solid #D0D0D0;
+    font-size: 19px;
+    font-weight: normal;
+    margin: 0 0 14px 0;
+    padding: 14px 15px 10px 15px;
+}
+
+code {
+    font-family: Consolas, Monaco, Courier New, Courier, monospace;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #D0D0D0;
+    color: #002166;
+    display: block;
+    margin: 14px 0 14px 0;
+    padding: 12px 10px 12px 10px;
+}
+
+#body {
+    margin: 0 15px 0 15px;
+}
+
+p.footer {
+    text-align: right;
+    font-size: 11px;
+    border-top: 1px solid #D0D0D0;
+    line-height: 32px;
+    padding: 0 10px 0 10px;
+    margin: 20px 0 0 0;
+}
+
+#container {
+    margin: 10px;
+    border: 1px solid #D0D0D0;
+    box-shadow: 0 0 8px #D0D0D0;
+}
+
+/* Estilos elementos*/
+
+.menu{color:white;text-align:center;padding:10px;background:black}
+.menu2{color:white;text-align:center;padding:10px;margin:10px}
+.p1{background:#00aa00;}
+.p2{background:#0000bb;}
+.p3{background:#00aaaa;}
+.p4{background:#aaaa00;}
+.p5{background:#aa00aa;}
+.ocupada{background-color:#aa0000;}
+.itemenu2{width:10%;padding:10px;font-size:16px;font-weight:bold; border:1px solid gray;}
+.itemenu{width:10%;padding:10px;color:white;font-size:16px;font-weight:bold}
+
+.boton{
+    font-size:1.0em;
+    border:2px solid #aaaaaa;
+    background:#666666;
+    margin:0 auto;
+    width:5%;
+    padding:5px;
+    font-weight:bold;
+    color:white;
+}
+table{margin:0 auto;}
+#park td{color:white;text-align:center;font-size:10px;width:40px;height:40px}
+
+.consultas{text-align:center;}
+.campo{margin:0 auto;}
+input[type=text]{padding:5px;text-transform: uppercase;font-weight:bolder;text-align:center}
+input[type=submit]{padding:5px;font-weight:bolder;text-align:center}
+h3{text-align:center;color:#aa0000}
+.reporte{border-collapse:collapse;width:40%;text-align:center;}
+.reporte td{font-size:1.2em;padding:5px;border:1px solid black;background:#f6f6f6}
