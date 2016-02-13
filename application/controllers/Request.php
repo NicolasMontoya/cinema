@@ -3,27 +3,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Request extends CI_Controller {
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     *	- or -
-     * 		http://example.com/index.php/welcome/index
-     *	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/user_guide/general/urls.html
-     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Request_model', "pt");
+    }
     public function index()
     {
         echo "Hola";
     }
-    public function get($room = "comedia")
+    public function get($db)
     {
-        echo $room;
+        $input = $this->input->post('date');
+        if($input == 'now')
+        {
+            $date = date('Y-m-d');
+        }
+        else
+        {
+            $date = $input;
+        }
+        $response = $this->pt->get($db,$date);
+        print json_encode($response);
+    }
+    public function set($db)
+    {
+        $name = $this->input->post('name');
+        $city = $this->input->post('city');
+        $data = $this->input->post('datos');
+        $input = $this->input->post('date');
+        if($input == 'undefined')
+        {
+            $date = date('Y-m-d');
+        }
+        else
+        {
+            $date = $input;
+        }
+        $response['date'] = $date;
+        $response['response'] = $this->pt->set($db,$name,explode(',',$data),$date,$city);
+        print json_encode($response);
+    }
+    public function delete($db)
+    {
+        $id = $this->input->post('id');
+        $this->pt->delete($db,$id);
+        $response['response'] = 'ok';
+        print json_encode($response);
     }
 }

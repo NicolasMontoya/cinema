@@ -53,4 +53,6 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['get/(:any)'] = 'request/get/$1';
-$route['get'] = 'request/get';
+$route['set/(:any)'] = 'request/set/$1';
+$route['delete/(:any)'] = 'request/delete/$1';
+$route['control'] = 'home/control';
