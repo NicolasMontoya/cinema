@@ -18,7 +18,7 @@
 	<div id="body">
 		<div class="rooms">
 			<label for="room">Sala</label>
-			<select name="room" id="room" ng-model="rooms">
+			<select id="room" ng-model="rooms" ng-change="getChange(rooms)">
 				<option value="comedia">Comedia</option>
 				<option value="terror">Terror</option>
 				<option value="drama">Drama</option>
@@ -32,7 +32,7 @@
 			</div>
 			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
-					<td ng-class="item.clear === 1 ? 'ocupada' : 'p1'" ng-attr-id="{{'s1'+item.id}}">{{item.id}}</td>
+					<td ng-click="logear(item.id)" ng-class="item.clear === 1 ? 'ocupada' : 'p1'" ng-attr-id="{{'s1'+item.id}}">{{item.id}}</td>
 				</tr>
 			</table>
 		</div>
@@ -45,6 +45,28 @@
 			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
 					<td ng-class="item.clear === 1 ? 'ocupada' : 'p2'" ng-attr-id="{{'s2'+item.id}}">{{item.id}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="drama" class="rooms" ng-show="rooms=='drama'">
+			<div class='menu2'>
+				<span class='itemenu2 p3'>P1</span>
+			</div>
+			<table id='park'  style="width: 25%;">
+				<tr style="display: inline-block; " ng-repeat="item in items">
+					<td ng-class="item.clear === 1 ? 'ocupada' : 'p3'" ng-attr-id="{{'s3'+item.id}}">{{item.id}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="accion" class="rooms" ng-show="rooms=='accion'">
+			<div class='menu2'>
+				<span class='itemenu2 p4'>P1</span>
+			</div>
+			<table id='park'  style="width: 25%;">
+				<tr style="display: inline-block; " ng-repeat="item in items">
+					<td ng-class="item.clear === 1 ? 'ocupada' : 'p4'" ng-attr-id="{{'s4'+item.id}}">{{item.id}}</td>
 				</tr>
 			</table>
 		</div>
