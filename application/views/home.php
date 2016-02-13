@@ -16,22 +16,39 @@
 	<h1>Bienvenido al cinema</h1>
 
 	<div id="body">
-		<div class='menu2'>
-			<span class='itemenu2 p1'>P1</span>
+		<div class="rooms">
+			<label for="room">Sala</label>
+			<select name="room" id="room" ng-model="rooms">
+				<option value="comedia">Comedia</option>
+				<option value="terror">Terror</option>
+				<option value="drama">Drama</option>
+				<option value="accion">Accion</option>
+			</select>
 		</div>
-		<table id='park'  style="width: 30%;">
+		
+		<div id="comedia" class="rooms" ng-show="rooms=='comedia'">
+			<div class='menu2'>
+				<span class='itemenu2 p1'>P1</span>
+			</div>
+			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
-					<td ng-class="item.clear === 1 ? 'p1' : 'ocupada'" ng-attr-id="{{'s1'+item.id}}">{{item.id}}</td>
+					<td ng-class="item.clear === 1 ? 'ocupada' : 'p1'" ng-attr-id="{{'s1'+item.id}}">{{item.id}}</td>
 				</tr>
-		</table>
-		<div class='menu2'>
-			<span class='itemenu2 p2'>P1</span>
+			</table>
 		</div>
-		<table id='park'  style="width: 30%;">
-			<tr style="display: inline-block; " ng-repeat="item in items">
-				<td ng-class="item.clear === 1 ? 'p2' : 'ocupada'" ng-attr-id="{{'s2'+item.id}}">{{item.id}}</td>
-			</tr>
-		</table>
+
+
+		<div id="terror" class="rooms" ng-show="rooms=='terror'">
+			<div class='menu2'>
+				<span class='itemenu2 p2'>P1</span>
+			</div>
+			<table id='park'  style="width: 25%;">
+				<tr style="display: inline-block; " ng-repeat="item in items">
+					<td ng-class="item.clear === 1 ? 'ocupada' : 'p2'" ng-attr-id="{{'s2'+item.id}}">{{item.id}}</td>
+				</tr>
+			</table>
+		</div>
+
 
 	</div>
 
