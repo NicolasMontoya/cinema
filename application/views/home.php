@@ -43,7 +43,8 @@
 		
 		<div id="comedia" class="rooms" ng-show="rooms=='comedia'">
 			<div class='menu2'>
-				<span class='itemenu2 p1'>P1</span>
+				<span class='itemenu2 p1'>DISPONIBLE</span>
+				<span class='itemenu2 ocupada'>OCUPADO</span>
 			</div>
 			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
@@ -55,7 +56,8 @@
 
 		<div id="terror" class="rooms" ng-show="rooms=='terror'">
 			<div class='menu2'>
-				<span class='itemenu2 p2'>P1</span>
+				<span class='itemenu2 p2'>DISPONIBLE</span>
+				<span class='itemenu2 ocupada'>OCUPADO</span>
 			</div>
 			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
@@ -66,7 +68,8 @@
 
 		<div id="drama" class="rooms" ng-show="rooms=='drama'">
 			<div class='menu2'>
-				<span class='itemenu2 p3'>P1</span>
+				<span class='itemenu2 p3'>DISPONIBLE</span>
+				<span class='itemenu2 ocupada'>OCUPADO</span>
 			</div>
 			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
@@ -77,7 +80,8 @@
 
 		<div id="accion" class="rooms" ng-show="rooms=='accion'">
 			<div class='menu2'>
-				<span class='itemenu2 p4'>P1</span>
+				<span class='itemenu2 p4'>DISPONIBLE</span>
+				<span class='itemenu2 ocupada'>OCUPADO</span>
 			</div>
 			<table id='park'  style="width: 25%;">
 				<tr style="display: inline-block; " ng-repeat="item in items">
@@ -100,6 +104,8 @@
 				<option value="0">Reservar</option>
 				<option value="1">Eliminar</option>
 			</select>
+			<br>
+			<br>
 			<label for="registro">Sillas</label>
 			<p id="others" ng-bind="chairs"></p>
 			<br>
