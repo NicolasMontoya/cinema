@@ -119,6 +119,6 @@
 	</div>
 
 </div>
-
+<p>NOTA: Las sillas preferenciales son las ubicadas del 0 al 9</p>
 </body>
 </html>
