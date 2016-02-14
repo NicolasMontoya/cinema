@@ -91,6 +91,7 @@
 		</div>
 
 		<form class="rooms" ng-show="rooms == 'accion' || rooms == 'drama' || rooms == 'terror' || rooms == 'comedia'">
+			<p>Sistema de reservas</p>
 			<label for="registro">Nombre</label>
 			<input id="registro" ng-bind="ajax1" ng-model="nameSubmit" type="text">
 			<br>
