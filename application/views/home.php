@@ -120,5 +120,6 @@
 
 </div>
 
+<p id="new">Las sillas preferenciales son las el primer 10% de cada sala</p>
 </body>
 </html>

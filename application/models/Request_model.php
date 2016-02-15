@@ -18,14 +18,51 @@ class Request_model extends CI_Model {
     {
         for($i = 0;$i < count($data);$i++)
         {
-            if((int)$data[$i] <= 9)
+            if($db == "comedia")
             {
-                $type = 1;
+                if((int)$data[$i] <= 9)
+                {
+                    $type = 1;
+                }
+                else
+                {
+                    $type = 0;
+                }
             }
-            else
+            elseif($db == "terror")
             {
-                $type = 0;
+                if((int)$data[$i] <= 11)
+                {
+                    $type = 1;
+                }
+                else
+                {
+                    $type = 0;
+                }
             }
+            elseif($db == "drama")
+            {
+                if((int)$data[$i] <= 5)
+                {
+                    $type = 1;
+                }
+                else
+                {
+                    $type = 0;
+                }
+            }
+            elseif($db == "accion")
+            {
+                if((int)$data[$i] <= 7)
+                {
+                    $type = 1;
+                }
+                else
+                {
+                    $type = 0;
+                }
+            }
+
             $array = array('nombre' => $name,'ciudad' => $city, 'silla' => $data[$i], 'fecha' => $date, 'tipo' => $type);
             $this->db->insert($db, $array);
         }
