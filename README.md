@@ -21,3 +21,5 @@ NOTAS :
 2. El programa por defecto al seleccionar una sala trae los datos del dia actual, pero si se desea reservar para otro dia solo se debe seleccionar una fecha en la parte superior izquierda
 y dar click en buscar.
 
+3. Las sillas preferenciales son las ubicadas del 0 al 9. 
+
